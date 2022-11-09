@@ -99,7 +99,7 @@ class _ListaPaseadoresState extends State<ListaPaseadores> {
 
                              ),
                              onTap: (){
-                               Paseador paseador=Paseador(paseadores["nombre"], paseadores["apellido"], paseadores["correo"], paseadores["celular"], paseadores["imagen"],paseadores["Descripcion"]);
+                               Paseador paseador=Paseador(paseadores["nombre"], paseadores["apellido"], paseadores["correo"], paseadores["celular"], paseadores["imagen"],paseadores["Descripcion"],paseadores["direccion"],paseadores["longitud"],paseadores["latitud"]);
                                Navigator.push(context, MaterialPageRoute(builder: (context)=>DetallePaseador(paseador)));
                              },
 

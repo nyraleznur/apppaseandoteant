@@ -1,5 +1,10 @@
+import 'package:apppaseandoteant/Boxes.dart';
+import 'package:apppaseandoteant/modelo/geo.dart';
 import 'package:apppaseandoteant/modelo/paseador.dart';
+import 'package:apppaseandoteant/modelo/paseadorfavorito.dart';
+import 'package:apppaseandoteant/vistas/googlemaps.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 
 class DetallePaseador extends StatefulWidget {
@@ -11,6 +16,16 @@ class DetallePaseador extends StatefulWidget {
 }
 
 class _DetallePaseadorState extends State<DetallePaseador> {
+  
+  void _favoritos()async{
+    var pasfavorito=Paseadorf()
+    ..nombre=widget.paseador.nombre
+        ..apellido=widget.paseador.apellido
+        ..correo=widget.paseador.correo
+        ..celular=widget.paseador.celular;
+    final box=Boxes.getfavoritosbox();
+    box.add(pasfavorito);
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -30,7 +45,18 @@ class _DetallePaseadorState extends State<DetallePaseador> {
 
                   ),
                 ),
+                
+                
               ),
+              IconButton(
+                  icon:Icon(Icons.favorite),
+              color: Colors.grey,
+                onPressed: ((){
+                  Fluttertoast.showToast(msg: "Tu favorito",toastLength: Toast.LENGTH_LONG,gravity: ToastGravity.CENTER);
+                  _favoritos();
+                }),
+              ),
+              
               Container(
                 margin: EdgeInsets.only(top: 30),
                 child: Text(widget.paseador.nombre+" "+widget.paseador.apellido,
@@ -64,6 +90,24 @@ class _DetallePaseadorState extends State<DetallePaseador> {
 
                   ),
                 ),
+              ),
+              ListTile(
+                title: Container(
+                  width: double.infinity,
+
+                  margin: EdgeInsets.only(top: 30),
+                  child: Text(widget.paseador.direccion,
+                    style: const TextStyle(
+                      fontSize: 22,
+                      fontFamily: "titulo",
+                    ),
+                  ),
+
+                ),
+                onTap: (){
+                  DatosGeolocalizacion loc=DatosGeolocalizacion(double.parse(widget.paseador.longitud), double.parse(widget.paseador.latitud), widget.paseador.direccion);
+                  Navigator.push((context), MaterialPageRoute(builder: (context)=>Geolocalizacion(loc)));
+                },
               ),
             ],
           ),

@@ -1,3 +1,4 @@
+import 'package:apppaseandoteant/vistas/googlemaps.dart';
 import 'package:apppaseandoteant/vistas/login.dart';
 import 'package:apppaseandoteant/vistas/registrobdusuario.dart';
 import 'package:apppaseandoteant/vistas/registrousuario.dart';

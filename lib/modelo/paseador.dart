@@ -5,5 +5,10 @@ class Paseador{
  String celular="";
  String imagen="";
  String descripcion="";
- Paseador(this.nombre, this.apellido, this.correo, this.celular, this.imagen,this.descripcion);
+ String direccion="";
+ String latitud="";
+ String  longitud="";
+
+ Paseador(this.nombre, this.apellido, this.correo, this.celular, this.imagen,
+      this.descripcion, this.direccion, this.latitud, this.longitud);
 }

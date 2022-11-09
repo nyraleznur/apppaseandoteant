@@ -1,3 +1,4 @@
+import 'package:apppaseandoteant/vistas/listarfavoritos.dart';
 import 'package:apppaseandoteant/vistas/somo.dart';
 import 'package:flutter/material.dart';
 class DrawableMenu extends StatelessWidget {
@@ -96,7 +97,31 @@ class DrawableMenu extends StatelessWidget {
               },
 
 
-            )
+            ),
+            GestureDetector(
+              child: Container(
+                width: double.infinity,
+                padding: EdgeInsets.all(10),
+                margin: EdgeInsets.only(bottom: 5, top: 5),
+                color: Color.fromARGB(200, 255, 255, 255),
+                child: Text("Somos",
+                  style: TextStyle(
+                    fontSize: 30,
+                    color:Colors.black,
+                    fontFamily: "titulo",
+
+                  ),
+                ),
+
+
+
+              ),
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>ListarFavoritos()));
+              },
+
+
+            ),
           ],
         ),
       ),
