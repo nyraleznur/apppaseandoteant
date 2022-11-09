@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "429272915203",
+    "project_id": "appflutterant",
+    "storage_bucket": "appflutterant.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:429272915203:android:838e3c823f009c13339d36",
+        "android_client_info": {
+          "package_name": "com.example.apppaseandoteant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "429272915203-89gnrthb0m4h4erlo5p9m87b9csgmnfb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDx5rFGG2fZDaERDMz-qdHUCthoGOMcJbY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "429272915203-89gnrthb0m4h4erlo5p9m87b9csgmnfb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
