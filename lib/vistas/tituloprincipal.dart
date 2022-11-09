@@ -12,17 +12,17 @@ class Titulo extends StatefulWidget {
 class _State extends State<Titulo> {
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.center,
     children: [
-       Expanded(
-      child: Container(
-          width: 200,
-          height: 210,
+      Expanded(
+        child: Container(
+          width: 50,
+          height: 70,
           margin: EdgeInsets.only(left: 10,right: 5),
           decoration: BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage('imgenes/logopas.png')
+                  image: AssetImage('imgenes/dogbluem.png')
               )
 
           ),

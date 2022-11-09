@@ -44,17 +44,15 @@ class _RigistroBDUsuarioState extends State<RigistroBDUsuario> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                    SizedBox(
-                    height: 16,
-                     ),
+
                   Container(
-                  //child: Titulo(),
+                  child: Titulo(),
                   ),
                   Center(
                     child: Container(
                         child: Text('Completa tu registro',
                           style: TextStyle(
-                              fontSize: 35,
+                              fontSize: 25,
                               fontFamily: 'titulo',
                               fontWeight: FontWeight.bold,
                               color:Colors.cyan

@@ -18,35 +18,30 @@ class _VistaPrincipalState extends State<VistaPrincipal> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+
       children: [
-       Expanded(
-         child: Container(
-           child: Titulo(),
-         ),
+       Container(
+
+         child: Titulo(),
        ),
-        Expanded(
-          child: Container(
-            height: 30,
-            width: 182,
-            margin: EdgeInsets.only(bottom: 10),
-            child: botonUno(),
-          ),
-        ),
-        Expanded(child:
+
         Container(
-          height: 30,
-          width: 200,
-          margin: EdgeInsets.only(bottom: 10),
+          height: 50,
+          width: double.infinity,
+
+          margin: EdgeInsets.only(top:30,bottom: 30),
+          child: botonUno(),
+        ),
+        Container(
+          height: 50,
+          width: double.infinity,
+          margin: EdgeInsets.only(top:30,bottom: 30),
           child: botonDos(),
         ),
-        ),
-        Expanded(
-          child: Container(
-            width: 240,
-            margin: EdgeInsets.only(bottom: 10),
-             child: botonTres(),
-          ),
+        Container(
+          width: double.infinity,
+          margin: EdgeInsets.only(top:30,bottom: 30),
+           child: botonTres(),
         )
       ],
     );

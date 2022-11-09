@@ -25,14 +25,9 @@ class _LoginState extends State<Login>{
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-          gradient:LinearGradient(
-            colors: [Color(0xff58ff08), Color(0xffffffff)],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-          )
-
-
-
+            image: DecorationImage(
+                image: AssetImage('imgenes/fondoregistro.jpeg'),
+            ),
         ),
         child: Scaffold(
           backgroundColor: Colors.transparent,
@@ -41,31 +36,11 @@ class _LoginState extends State<Login>{
         child: ListView(
         children: [
           Container(
-          //  child: Titulo(),
+            child: Titulo(),
             margin: EdgeInsets.only(bottom:30 )
           ),
-          Container(
-            margin: EdgeInsets.only(bottom:0 ),
-            child: const Text('Welcome ',
-              style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'titulo',
-                  color: Colors.green
-              ),
-              textAlign: TextAlign.center,
-            ),
-         ),
-          Container(
-            width: 100,
-            height: 120,
-            margin: EdgeInsets.only(bottom: 30),
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage('imgenes/avatardos.png')
-                )
-            ),
-          ),
+
+
            Container(
                child:txtusuario(),
         ),
@@ -157,8 +132,8 @@ class _LoginState extends State<Login>{
 
 
         ),
-
-          backgroundColor: Color(0xff58ff08),
+           
+          backgroundColor: Color(0xff58ff08).withOpacity(0.2)
 
       ),
 

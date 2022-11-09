@@ -71,18 +71,18 @@ class _RegistrarUsuarioState extends State<RegistrarUsuario>{
               children: [
                 Center(
                   child: Container(
-                    width: 300,
-                    height: 200,
+                    width: double.infinity,
+                    height: 250,
 
                       child: Titulo(),
-                      margin: EdgeInsets.only(bottom:30 )
+                      margin: EdgeInsets.only(bottom:10 )
                   ),
                 ),
                 Center(
                   child: Container(
                       child: Text('Ingresa tus datos ',
                       style: TextStyle(
-                        fontSize: 35,
+                        fontSize: 25,
                             fontFamily: 'titulo',
                         fontWeight: FontWeight.bold,
                           color:Colors.cyan
@@ -158,7 +158,7 @@ class _RegistrarUsuarioState extends State<RegistrarUsuario>{
 
         ),
 
-        backgroundColor: Color(0xff58ff08),
+          backgroundColor: Color(0xff58ff08).withOpacity(0.2)
 
       ),
       child: Text('Ingresar',
